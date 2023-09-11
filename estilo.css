@@ -15,10 +15,10 @@
 
 .petlegal{
     border-radius:20px;
-    font-size:22px;
+    font-size:25px;
     vertical-align: bottom;
     transition:0.2s;
-    height:300px;
+    height:320px;
     display:flex;
     flex-direction:column;
     justify-content:space-between;
@@ -57,9 +57,53 @@
     font-size:28px;
 }
 
+.petlegal3{
+    color:white;
+    -webkit-text-stroke-color:rgb(66, 66, 66);
+    -webkit-text-stroke-width:2px;
+    text-shadow:black 0px 0px 3px;
+}
+
+.petlegal3 h2{
+    font-size:35px;
+    letter-spacing:2px;
+
+}
+
+.turtle h2{
+    color:#FEBD00;
+    -webkit-text-stroke-color:rgb(124, 67, 35);
+}
+
+.turtle h2{
+    color:#FEBD00;
+    -webkit-text-stroke-color:rgb(124, 67, 35);
+}
+
+.turtle h2{
+    color:#FEBD00;
+    -webkit-text-stroke-color:rgb(124, 67, 35);
+}
+
+.puppy h2{
+    color:#ff9100;
+    -webkit-text-stroke-color: #752d43;
+}
+
+.weekly h2{
+    color:#6C9BF6;
+    -webkit-text-stroke-color: #44467E;
+}
+
+.star h2{
+    color:#43ff2a;
+    -webkit-text-stroke-color: #0b702c;
+}
+
 .petlegal img{
     transition:0.15s;
-    width:160px;
+    margin-bottom:12px;
+    max-height:150px;
 
     /* height:150px;
     width:150px; */
@@ -69,7 +113,7 @@
 
 .petlegal img:hover{
     cursor:pointer;
-    scale:0.9;
+    scale:1.1;
 }
 
 #pet-container{
@@ -176,7 +220,6 @@ header img{
     margin-top:80px;
     text-align:center;
 }
-
 
 .Pack{
     width:150px;
