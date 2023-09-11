@@ -2,7 +2,6 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="estilo.css">
-        <script type="text/javascript" src="script.js"> defer</script>
         <link rel="shortcut icon" href="photos/CupCake.ico" type="image/x-icon">
         <title>SuperAutoInformations</title>
     </head>
@@ -16,10 +15,14 @@
             </div>
         </header>
         <div class="Space"></div>
+        <button onclick="filtro(+1)">OPA</button>
+        <button onclick="filtro(+2)">OPAS</button>
+        <button onclick="filtro(+3)">OPAR</button>
         <div id="loading">
             <img src="photos/Tartaruga.gif">
             <p>Loading...</p>
          </div>
-        <div id="pet-container"></div>
+        <div id="pet-container" class="turtle"></div>
+        <script type="text/javascript" src="script.js"> defer</script>
     </body>
 </html>
