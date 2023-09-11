@@ -1,20 +1,12 @@
-var teste = 0;
-
-document.addEventListener("DOMContentLoaded", function () {
-     
+var teste = 0; 
 var url = "https://saptest.fly.dev/db/pets?pack=Turtle&lvl=1&effect_trigger=Faint";
+
 const petContainer = document.querySelector("#pet-container");
 const loadingElement = document.querySelector("#loading");
 
 async function  trocarPets(){
 
-    if (window.location.href.includes('weekly.html')) 
-    {
-        url = "https://saptest.fly.dev/db/pets?pack=Weekly&lvl=1";
-        teste +=1;
-        console.log(teste);
-    }
-    else if (window.location.href.includes('puppy.html')) 
+    if (window.location.href.includes('puppy.html')) 
     {
         url = "https://saptest.fly.dev/db/pets?pack=Puppy&lvl=1";
         console.log(url);
@@ -24,11 +16,6 @@ async function  trocarPets(){
         url = "https://saptest.fly.dev/db/pets?pack=Star&lvl=1";
         console.log(url);
     } 
-    else  if (window.location.href.includes('turtle.html')) 
-    {
-        url = "https://saptest.fly.dev/db/pets?pack=Turtle&lvl=1";
-        console.log(url);
-    }
 }
 
 
@@ -43,8 +30,10 @@ async function getAllPets() {
     console.log(data);
 
     loadingElement.classList.add("hide");
-
+    petContainer.innerHTML= "";
+    
     data.map((pets) => {
+
 
         const div = document.createElement("div")
         const div2 = document.createElement("div")
@@ -67,9 +56,7 @@ async function getAllPets() {
         const description = document.createElement("h3");
         imagem.classList.add("PetImagem");
         name.innerText = (`${pets.name}`);
-        // health.innerText = (`${pets.health == "1" ? "❤️" : pets.health == "2" ? "❤️❤️" : "❤️❤️❤️"}`);
         health.innerText = (`Health: ${pets.health}`);
-        // health.style.backgroundImage ='https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/768px-Heart_coraz%C3%B3n.svg.png';
         attack.innerText = (`Attack: ${pets.attack}`);
         imagem.src = pets.img_url;
         description.classList.add("description");
@@ -106,4 +93,27 @@ async function getAllPets() {
 
 getAllPets();
 
-});
+async function filtro(number){
+    teste+=number
+    console.log(teste)
+        
+    if(teste==1){
+        url = "https://saptest.fly.dev/db/pets?pack=Turtle&lvl=1&tier=1";
+        console.log(`oi`);
+        getAllPets();
+        teste=0;
+    }
+    else if(teste==2){
+        url = "https://saptest.fly.dev/db/pets?pack=Turtle&lvl=1&tier=2";
+        console.log(`oi`);
+        getAllPets();
+        teste=0;
+    }
+    else if(teste==3){
+        url = "https://saptest.fly.dev/db/pets?pack=Turtle&lvl=1&tier=3";
+        console.log(`oi`);
+        getAllPets();
+        teste=0;
+    }
+}
+
