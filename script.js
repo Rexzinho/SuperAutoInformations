@@ -116,4 +116,3 @@ async function filtro(number){
         teste=0;
     }
 }
-
