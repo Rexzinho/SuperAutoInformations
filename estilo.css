@@ -33,6 +33,7 @@
 }
 
 .petlegal{
+    margin-top:90px;
     border-radius:20px;
     font-size:25px;
     vertical-align: bottom;
@@ -227,6 +228,9 @@
     flex-direction:column;
     margin-top:100px;
     animation: toin 0.250s ease-in-out;
+    margin-top:150px;
+    margin-left:40%;
+    position:fixed;
 }
 
 p{
@@ -341,19 +345,20 @@ header img{
     text-shadow: 5px 5px black;
 }
 
-.Space{
-    height:90px;
-}
+.Space
 
-.Space2{
-    height:0px;
+.logo{
+    margin:auto;
+    display:flex;
+    padding:40px;
 }
 
 .logo{
     width:550px;
-    margin:auto;
     display:flex;
-    padding:40px;
+    margin-left:auto;
+    margin-right:auto;
+    padding-top:120px;
 }
 
 .Selection{
@@ -488,6 +493,10 @@ footer{
         margin-top:30px;
     }
 
+    .petlegal{
+        margin:0;
+    }
+
     .Space{
         height:80px;
         width:900px;
@@ -604,7 +613,7 @@ footer{
     .fundo4, .fundo3, .fundo2, .fundo1{
         height:86vh;
         margin-top:0px;
-        zoom:320%;
+        zoom:300%;
         min-width:900px;
         background-size:900px;
     }
