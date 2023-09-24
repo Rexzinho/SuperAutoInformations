@@ -1,23 +1,34 @@
 var teste = 0; 
-var url = "https://saptest.fly.dev/db/pets?pack=Turtle&lvl=1&effect_trigger=Faint";
+
+    if (window.location.href.includes('puppy.html'))
+    var url = "https://saptest.fly.dev/db/pets?pack=Puppy&lvl=1&tier=1";
+
+    else if (window.location.href.includes('weekly.html')) 
+    var url = "https://saptest.fly.dev/db/pets?pack=Weekly&lvl=1&tier=1";
+
+    else if (window.location.href.includes('turtle.html')) 
+    var url = "https://saptest.fly.dev/db/pets?pack=Turtle&lvl=1&tier=1";
+
+    else if (window.location.href.includes('star.html')) 
+    var url = "https://saptest.fly.dev/db/pets?pack=Star&lvl=1&tier=1"; 
+
 
 const petContainer = document.querySelector("#pet-container");
 const loadingElement = document.querySelector("#loading");
 
 async function  trocarPets(){
 
-    if (window.location.href.includes('puppy.html')) 
-    {
-        url = "https://saptest.fly.dev/db/pets?pack=Puppy&lvl=1";
-        console.log(url);
-    } 
-    else if (window.location.href.includes('star.html')) 
-    {
-        url = "https://saptest.fly.dev/db/pets?pack=Star&lvl=1";
-        console.log(url);
-    } 
-}
+var imagem = document.querySelector(".PetImagem");
 
+    imagem.addEventListener("mouseenter", function() {
+      imagem.style.display = "none"; // Oculta a imagem quando o mouse entra
+    });
+  
+    imagem.addEventListener("mouseleave", function() {
+      imagem.style.display = "block"; // Mostra a imagem novamente quando o mouse sai
+    });
+
+}
 
 async function getAllPets() {
     trocarPets();
@@ -97,22 +108,149 @@ async function filtro(number){
     teste+=number
     console.log(teste)
         
-    if(teste==1){
+    switch(teste){
+    case 1:
+        if (window.location.href.includes('puppy.html'))
+        url = "https://saptest.fly.dev/db/pets?pack=Puppy&lvl=1&tier=1";
+    
+        else if (window.location.href.includes('weekly.html')) 
+        url = "https://saptest.fly.dev/db/pets?pack=Weekly&lvl=1&tier=1";
+
+        else if (window.location.href.includes('turtle.html')) 
         url = "https://saptest.fly.dev/db/pets?pack=Turtle&lvl=1&tier=1";
-        console.log(`oi`);
+
+        else if (window.location.href.includes('star.html')) 
+        url = "https://saptest.fly.dev/db/pets?pack=Star&lvl=1&tier=1"; 
+
         getAllPets();
         teste=0;
-    }
-    else if(teste==2){
+    break;
+    case 2:
+        if (window.location.href.includes('puppy.html'))
+        url = "https://saptest.fly.dev/db/pets?pack=Puppy&lvl=1&tier=2";
+
+        else if (window.location.href.includes('weekly.html')) 
+        url = "https://saptest.fly.dev/db/pets?pack=Weekly&lvl=1&tier=2";
+
+        else if (window.location.href.includes('turtle.html')) 
         url = "https://saptest.fly.dev/db/pets?pack=Turtle&lvl=1&tier=2";
-        console.log(`oi`);
+
+        else if (window.location.href.includes('star.html')) 
+        url = "https://saptest.fly.dev/db/pets?pack=Star&lvl=1&tier=2"; 
+
         getAllPets();
         teste=0;
-    }
-    else if(teste==3){
+    break;
+    case 3:
+         if (window.location.href.includes('puppy.html'))
+        url = "https://saptest.fly.dev/db/pets?pack=Puppy&lvl=1&tier=3";
+
+        else if (window.location.href.includes('weekly.html')) 
+        url = "https://saptest.fly.dev/db/pets?pack=Weekly&lvl=1&tier=3";
+
+        else if (window.location.href.includes('turtle.html')) 
         url = "https://saptest.fly.dev/db/pets?pack=Turtle&lvl=1&tier=3";
-        console.log(`oi`);
+
+        else if (window.location.href.includes('star.html')) 
+        url = "https://saptest.fly.dev/db/pets?pack=Star&lvl=1&tier=3"; 
+
         getAllPets();
         teste=0;
+    break;
+    case 4:
+         if (window.location.href.includes('puppy.html'))
+        url = "https://saptest.fly.dev/db/pets?pack=Puppy&lvl=1&tier=4";
+
+        else if (window.location.href.includes('weekly.html')) 
+        url = "https://saptest.fly.dev/db/pets?pack=Weekly&lvl=1&tier=4";
+
+        else if (window.location.href.includes('turtle.html')) 
+        url = "https://saptest.fly.dev/db/pets?pack=Turtle&lvl=1&tier=4";
+
+        else if (window.location.href.includes('star.html')) 
+        url = "https://saptest.fly.dev/db/pets?pack=Star&lvl=1&tier=4"; 
+
+        getAllPets();
+        teste=0;
+    break;
+    case 5:
+         if (window.location.href.includes('puppy.html'))
+        url = "https://saptest.fly.dev/db/pets?pack=Puppy&lvl=1&tier=5";
+
+        else if (window.location.href.includes('weekly.html')) 
+        url = "https://saptest.fly.dev/db/pets?pack=Weekly&lvl=1&tier=5";
+
+        else if (window.location.href.includes('turtle.html')) 
+        url = "https://saptest.fly.dev/db/pets?pack=Turtle&lvl=1&tier=5";
+
+        else if (window.location.href.includes('star.html')) 
+        url = "https://saptest.fly.dev/db/pets?pack=Star&lvl=1&tier=5"; 
+
+        getAllPets();
+        teste=0;
+    break;
+    case 6:
+         if (window.location.href.includes('puppy.html'))
+        url = "https://saptest.fly.dev/db/pets?pack=Puppy&lvl=1&tier=6";
+
+        else if (window.location.href.includes('weekly.html')) 
+        url = "https://saptest.fly.dev/db/pets?pack=Weekly&lvl=1&tier=6";
+
+        else if (window.location.href.includes('turtle.html')) 
+        url = "https://saptest.fly.dev/db/pets?pack=Turtle&lvl=1&tier=6";
+
+        else if (window.location.href.includes('star.html')) 
+        url = "https://saptest.fly.dev/db/pets?pack=Star&lvl=1&tier=6"; 
+
+        getAllPets();
+        teste=0;
+    break;
+    case 7:
+         if (window.location.href.includes('puppy.html'))
+        url = "https://saptest.fly.dev/db/pets?pack=Puppy&lvl=1&effect_trigger=Faint";
+
+        else if (window.location.href.includes('weekly.html')) 
+        url = "https://saptest.fly.dev/db/pets?pack=Weekly&lvl=1&effect_trigger=Faint";
+
+        else if (window.location.href.includes('turtle.html')) 
+        url = "https://saptest.fly.dev/db/pets?pack=Turtle&lvl=1&effect_trigger=Faint";
+
+        else if (window.location.href.includes('star.html')) 
+        url = "https://saptest.fly.dev/db/pets?pack=Star&lvl=1&effect_trigger=Faint"; 
+
+        getAllPets();
+        teste=0;
+    break;
+    case 8:
+         if (window.location.href.includes('puppy.html'))
+        url = "https://saptest.fly.dev/db/pets?pack=Puppy&lvl=1&effect_trigger=Buy";
+   
+        else if (window.location.href.includes('weekly.html')) 
+        url = "https://saptest.fly.dev/db/pets?pack=Weekly&lvl=1&effect_trigger=Hurt";
+
+        else if (window.location.href.includes('turtle.html')) 
+        url = "https://saptest.fly.dev/db/pets?pack=Turtle&lvl=1&effect_trigger=Hurt";
+
+        else if (window.location.href.includes('star.html')) 
+        url = "https://saptest.fly.dev/db/pets?pack=Star&lvl=1&effect_trigger=Hurt"; 
+
+        getAllPets();
+        teste=0;
+    break;
+    case 9:
+        if (window.location.href.includes('puppy.html'))
+        url = "https://saptest.fly.dev/db/pets?pack=Puppy&lvl=1&effect_trigger=End turn";
+
+        else if (window.location.href.includes('weekly.html')) 
+        url = "https://saptest.fly.dev/db/pets?pack=Weekly&lvl=1&tier=1";
+
+        else if (window.location.href.includes('turtle.html')) 
+        url = "https://saptest.fly.dev/db/pets?pack=Turtle&lvl=1&effect_trigger=End turn";
+
+        else if (window.location.href.includes('star.html')) 
+        url = "https://saptest.fly.dev/db/pets?pack=Star&lvl=1&effect_trigger=End turn"; 
+        getAllPets();
+        teste=0;
+    break;
     }
 }
