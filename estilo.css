@@ -152,10 +152,30 @@
     justify-content:space-evenly;
 }
 
+.Botoes3{
+    height:700px;
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-evenly;
+    background-color:#000E15;
+    position:fixed;
+}
+
 .Filtro{
     border:none;
     width:10%;
     height:35px;
+    border-radius:8px;
+    font-size:20px;
+    border: 3px solid rgb(0, 0, 0);
+    transition:0.25s;
+}
+
+.Filtro2{
+    border:none;
+    width: 33%;
+    height:150px;
     border-radius:8px;
     font-size:20px;
     border: 3px solid rgb(0, 0, 0);
@@ -220,7 +240,7 @@ p{
 }
 
 .overFlow{
-    overflow-y: hidden;
+
 }
 
 .body4{
@@ -439,7 +459,10 @@ footer{
 @media(max-width: 900px) {
 
     #loading{
-        margin-top:0px;
+        position:fixed;
+        width:80vw;
+        margin-left:10vw;
+        margin-top:-120px;
     }
 
     .Space{
@@ -564,5 +587,6 @@ footer{
     #pet-container{
         margin-top:-70px;
     }
+
     
 }
