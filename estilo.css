@@ -443,14 +443,14 @@ footer{
     }
 
     .Space{
-        height:150px;
+        height:20vh;
         width:900px;
     }
 
     header{
         background-color:blue;
-        height:150px;
-        min-height:150px;
+        height:20vh;
+        min-height:20h;
         font-size:80px;
     }
 
