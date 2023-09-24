@@ -143,6 +143,15 @@
     scale:1.2;
 }
 
+.Space3{
+    width:400vw;
+    display:flex;
+    background-color:#000E15;
+    display:none;
+    justify-content:center;
+    align-items:center;
+}
+
 .Botoes{
     margin-top:10px;
     width:90%;
@@ -153,12 +162,14 @@
 }
 
 .Botoes3{
-    height:700px;
-    width:100%;
+    height:105vh;
+    width:400vw;
     display:flex;
     flex-direction:column;
     justify-content:space-evenly;
+    align-items:center;
     background-color:#000E15;
+    display:none;
     position:fixed;
 }
 
@@ -174,11 +185,11 @@
 
 .Filtro2{
     border:none;
-    width: 33%;
-    height:150px;
-    border-radius:8px;
-    font-size:20px;
-    border: 3px solid rgb(0, 0, 0);
+    width: 115vw;
+    height:25vh;
+    border-radius:40px;
+    font-size:70px;
+    border: 12px solid rgb(0, 0, 0);
     transition:0.25s;
 }
 
@@ -190,6 +201,16 @@
 .Filtro:active{
     scale:0.9;
 }
+
+.Filtro2:hover{
+    cursor:pointer;
+    scale:1.08;
+}
+
+.Filtro2:active{
+    scale:0.9;
+}
+
 
 #pet-container{
     display:flex;
@@ -217,30 +238,32 @@ p{
     background-color:#00273A;
 }
 
-.fundo1{
-    background-image: url("photos/Background1.png");
+.fundo1, .fundo2, .fundo3, .fundo4{
     min-width:100vw;
     width:fit-content;
     height:870px;
     background-size:1090px;
 }
 
-.body2{
-    background-image: url("photos/Background2.png");
-    background-size:1090px;
+.fundo4{
+    background-image: url("photos/Background4.png");
 }
 
 .fundo3{
-    margin-top:-90px;
     background-image: url("photos/Background3.png");
-    min-width:100vw;
-    width:fit-content;
-    height:870px;
-    background-size:1090px;
 }
 
-.overFlow{
+.fundo2{
+    background-image: url("photos/Background2.png");
+}
 
+.fundo1{
+    background-image: url("photos/Background1.png");
+}
+
+
+.overFlow{
+    overflow-y:hidden;
 }
 
 .body4{
@@ -460,19 +483,23 @@ footer{
 
     #loading{
         position:fixed;
-        width:80vw;
+        width:105vw;
         margin-left:10vw;
-        margin-top:-120px;
+        margin-top:30px;
     }
 
     .Space{
-        height:20vh;
+        height:80px;
         width:900px;
     }
 
+    .Space3{
+        display:block;
+    }
+
     header{
-        background-color:blue;
-        height:20vh;
+        background-color:#000E15;
+        height:150px;
         min-height:20h;
         font-size:80px;
     }
@@ -574,10 +601,12 @@ footer{
         display:block;
     }
     
-    .fundo3{
+    .fundo4, .fundo3, .fundo2, .fundo1{
+        height:86vh;
         margin-top:0px;
-        zoom:400%;
+        zoom:320%;
         min-width:900px;
+        background-size:900px;
     }
 
     .Space2{
@@ -588,5 +617,15 @@ footer{
         margin-top:-70px;
     }
 
-    
+    .Botoes3{
+        display:flex;
+        justify-content:space-evenly;
+        align-items:center;
+    }
+
+    .overFlow{
+        overflow-y:visible;
+        background-color:#000E15;
+    }
+
 }
