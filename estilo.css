@@ -9,6 +9,25 @@
     padding:0;
 }
 
+@keyframes toin {
+    from {
+      scale:0.8;
+    }
+    to {
+      scale:1.05;
+    }
+  }
+
+@keyframes cross {
+    from {
+      opacity:0%;
+    }
+    to {
+      opacity:100%;
+    }
+  }
+
+
 .hide{
     display: none !important;
 }
@@ -18,39 +37,46 @@
     font-size:25px;
     vertical-align: bottom;
     transition:0.2s;
-    height:320px;
+    height:310px;
     display:flex;
     flex-direction:column;
     justify-content:space-between;
+    animation: toin 0.09s ease-in-out;
     /* line-height:0.5px; */
 }
 
 .petlegal4{
-    margin:25px;
+    margin:15px;
     padding:10px;
     text-align:center;
 }
 
 .petlegal4:hover .description{
     display: block;
+    animation: cross 0.25s ease-in-out;
 }
 
 .petlegal4:hover .petlegal6 h3{
     display: block;
+    animation: cross 0.25s ease-in-out;
 }
 
 .petlegal6{
-    height:70px;
-    transition: transform 1s;
+    width:200px;
+    height:75px;
 }
 
 .petlegal6 h3{
     display:none;
 }
 
+.petlegal5{
+    width:200px;
+}
+
 .description {
     display: none;
-    font-size:20px;
+    font-size:18px;
 }
 
 .petlegal h2{
@@ -101,9 +127,10 @@
 }
 
 .petlegal img{
-    transition:0.15s;
+    transition:0.25s;
     margin-bottom:12px;
-    max-height:150px;
+    max-height:140px;
+    max-width:140px;
 
     /* height:150px;
     width:150px; */
@@ -113,12 +140,39 @@
 
 .petlegal img:hover{
     cursor:pointer;
-    scale:1.1;
+    scale:1.2;
+}
+
+.Botoes{
+    margin-top:10px;
+    width:90%;
+    margin:auto;
+    height:fit-content;
+    display:flex;
+    justify-content:space-evenly;
+}
+
+.Filtro{
+    border:none;
+    width:10%;
+    height:35px;
+    border-radius:8px;
+    font-size:20px;
+    border: 3px solid rgb(0, 0, 0);
+    transition:0.25s;
+}
+
+.Filtro:hover{
+    cursor:pointer;
+    scale:1.08;
+}
+
+.Filtro:active{
+    scale:0.9;
 }
 
 #pet-container{
     display:flex;
-    height:150px;
 }
 
 #pet-container2{
@@ -131,6 +185,7 @@
     display: flex;
     flex-direction:column;
     margin-top:100px;
+    animation: toin 0.250s ease-in-out;
 }
 
 p{
@@ -142,8 +197,11 @@ p{
     background-color:#00273A;
 }
 
-.body1{
+.fundo1{
     background-image: url("photos/Background1.png");
+    min-width:100vw;
+    width:fit-content;
+    height:870px;
     background-size:1090px;
 }
 
@@ -152,14 +210,26 @@ p{
     background-size:1090px;
 }
 
-.body3{
+.fundo3{
+    margin-top:-90px;
     background-image: url("photos/Background3.png");
+    min-width:100vw;
+    width:fit-content;
+    height:870px;
     background-size:1090px;
+}
+
+.overFlow{
+    overflow-y: hidden;
 }
 
 .body4{
     background-image: url("photos/Background4.png");
     background-size:1090px;
+}
+
+.TeamWood{
+    display:none;
 }
 
 header{
@@ -175,22 +245,49 @@ header{
     z-index:999; 
 }
 
+h2{
+    font-size:35px;
+}
+
 header a{
+    width:35px;
+    height:35px;
     text-decoration:none;
     color:white;
     margin-left:25px;
+    transition:0.2s;
+}
+
+header a:hover{
+    scale:0.9;
+}
+
+header img:hover{
+    scale:0.85;
+}
+
+header a:active{
+    opacity:70%;
+}
+
+header img:active{
+    opacity:70%;
 }
 
 header img{
-    width:35px;
+    height:35px;
+    transition:0.2s;
 }
+
 
 .home{
     filter:invert();
 }
 
 .Redes{
+    height:35px;
     margin-right:25px;
+    display:flex;
 }
 
 .principal{
@@ -203,6 +300,10 @@ header img{
 
 .Space{
     height:90px;
+}
+
+.Space2{
+    height:0px;
 }
 
 .logo{
@@ -256,6 +357,12 @@ header img{
     margin-top:30px;
 }
 
+    .Packs1, .Packs2{
+        width:50%;
+        display:flex;
+        justify-content:space-around;
+    }
+
 .PackName{
     height:70px;
     width:100%;
@@ -277,19 +384,26 @@ header img{
 
 .Plays{
     display:flex;
+    flex-direction:row;
     width:900px;
     height:fit-content;
     align-items:center;
-    justify-content:space-between;
     margin:auto;
 }
 
+    .Plays1, .Plays2{
+        width:50%;
+        display:flex;
+        justify-content:space-around;
+    }
+
 .Play{
     width:120px;
-    height:230px;
+    height:fit-content;
     text-align:center;
     color:white;
     font-size:30px;
+    padding-bottom:80px;
 }
 
 .Play img{
@@ -320,4 +434,135 @@ footer{
     width:100%;
     height:200px;
     background-color:#000E15;
+}
+
+@media(max-width: 900px) {
+
+    #loading{
+        margin-top:0px;
+    }
+
+    .Space{
+        height:150px;
+        width:900px;
+    }
+
+    header{
+        background-color:blue;
+        height:150px;
+        min-height:150px;
+        font-size:80px;
+    }
+
+    header img{
+        height:70px;
+    }
+
+    header a{
+        padding:25px;
+        width:fit-content;
+        height:70px;
+    }
+
+    .Redes{
+        height:fit-content;
+    }
+
+    .Redes1{
+        display:none;
+    }
+
+    .body0{
+        width:900px;
+    }
+
+    .logo{
+        width:800px;
+        padding-top:160px;
+        padding-bottom:160px;
+    }
+
+    .Select{
+        font-size:120px;
+        padding-top:50px;
+    }
+
+    .Selection{
+        background-size:1500px;
+        height:1200px;
+    }
+    .Pack{
+        width:260px;
+        height:440px;
+        font-size:80px;
+    }
+    .PackName{
+        font-size:70px;
+    }
+
+    .Select2{
+        padding:80px;
+        padding-top:160px;
+    }
+
+    .Plays{
+        flex-direction:column;
+        padding-bottom:80px;
+        width:100%;
+    }
+
+    .Plays h3{
+        font-size:70px;
+    }
+
+    .Plays1, .Plays2{
+        width:80%;
+        justify-content:space-around;
+        display:flex;
+        padding:80px;
+    }
+
+    .Play{
+        width:240px;
+        height:fit-content;
+    }
+
+    .Packs{
+        flex-direction:column;
+        align-items:center;
+        padding-top:30px;
+    }
+
+    .Packs2 .Pack{
+        padding-top:140px;
+        flex-direction:column-reverse;
+        height:250px;
+    }
+
+    .Packs1, .Packs2{
+        width:80%;
+    }
+
+    .Botoes{
+        display:none;
+    }
+
+    .TeamWood{
+        display:block;
+    }
+    
+    .fundo3{
+        margin-top:0px;
+        zoom:400%;
+        min-width:900px;
+    }
+
+    .Space2{
+        height:150px;
+    }
+
+    #pet-container{
+        margin-top:-70px;
+    }
+    
 }
