@@ -16,22 +16,9 @@ var teste = 0;
 const petContainer = document.querySelector("#pet-container");
 const loadingElement = document.querySelector("#loading");
 
-async function  trocarPets(){
-
 var imagem = document.querySelector(".PetImagem");
 
-    imagem.addEventListener("mouseenter", function() {
-      imagem.style.display = "none"; // Oculta a imagem quando o mouse entra
-    });
-  
-    imagem.addEventListener("mouseleave", function() {
-      imagem.style.display = "block"; // Mostra a imagem novamente quando o mouse sai
-    });
-
-}
-
 async function getAllPets() {
-    trocarPets();
     const response = await fetch(url);
     
     console.log(response);
@@ -70,6 +57,7 @@ async function getAllPets() {
         health.innerText = (`Health: ${pets.health}`);
         attack.innerText = (`Attack: ${pets.attack}`);
         imagem.src = pets.img_url;
+        imagem.alt = (`${name.innerText} drawing`);
         description.classList.add("description");
         description.innerText = (`Effect: ${pets.effect}`);
         tier.innerText = (`Tier: ${pets.tier}`)
