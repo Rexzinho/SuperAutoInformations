@@ -33,7 +33,6 @@
 }
 
 .petlegal{
-    margin-top:90px;
     border-radius:20px;
     font-size:25px;
     vertical-align: bottom;
@@ -48,6 +47,7 @@
 
 .petlegal4{
     margin:15px;
+    margin-top:110px;
     padding:10px;
     text-align:center;
 }
@@ -102,27 +102,27 @@
     -webkit-text-stroke-color:rgb(124, 67, 35);
 }
 
-.turtle h2{
+.bodyTurtle h2{
     color:#FEBD00;
     -webkit-text-stroke-color:rgb(124, 67, 35);
 }
 
-.turtle h2{
+.bodyTurtle h2{
     color:#FEBD00;
     -webkit-text-stroke-color:rgb(124, 67, 35);
 }
 
-.puppy h2{
+.bodyPuppy h2{
     color:#ff9100;
     -webkit-text-stroke-color: #752d43;
 }
 
-.weekly h2{
+.bodyWeekly h2{
     color:#6C9BF6;
     -webkit-text-stroke-color: #44467E;
 }
 
-.star h2{
+.bodyStar h2{
     color:#43ff2a;
     -webkit-text-stroke-color: #0b702c;
 }
@@ -238,8 +238,24 @@ p{
     font-size:35px;
 }
 
-.body0{
+.body{
     background-color:#00273A;
+}
+
+.bodyPuppy{
+    background-color:#2F1D37;
+}
+
+.bodyWeekly{
+    background-color:#3F221C;
+}
+
+.bodyTurtle{
+    background-color:#1C3017;
+}
+
+.bodyStar{
+    background-color:#401D1E;
 }
 
 .fundo1, .fundo2, .fundo3, .fundo4{
@@ -247,6 +263,7 @@ p{
     width:fit-content;
     height:870px;
     background-size:1090px;
+    background-repeat: repeat-x;
 }
 
 .fundo4{
@@ -268,11 +285,6 @@ p{
 
 .overFlow{
     overflow-y:hidden;
-}
-
-.body4{
-    background-image: url("photos/Background4.png");
-    background-size:1090px;
 }
 
 .TeamWood{
@@ -335,6 +347,10 @@ header img{
     height:35px;
     margin-right:25px;
     display:flex;
+}
+
+.Redes2{
+    display:none;
 }
 
 .principal{
@@ -478,10 +494,22 @@ header img{
     border-radius:20px;
 }
 
+::-webkit-scrollbar-thumb:horizontal{
+    scale:1.5;
+}
+
 footer{
+    display:flex;
+    justify-content:center;
+    align-items:center;
     width:100%;
-    height:200px;
+    height:220px;
     background-color:#000E15;
+}
+
+footer h4{
+    font-size:25px;
+    color:white;
 }
 
 @media(max-width: 900px) {
@@ -493,8 +521,8 @@ footer{
         margin-top:30px;
     }
 
-    .petlegal{
-        margin:0;
+    .petlegal4{
+        margin:20px;
     }
 
     .Space{
@@ -531,7 +559,33 @@ footer{
         display:none;
     }
 
-    .body0{
+    footer{
+        height:600px;
+        display:flex;
+        flex-direction:column;
+        justify-content:space-evenly;
+    }
+
+    footer h4{
+        margin-left:40px;
+        margin-right:40px;
+        font-size:50px;
+        text-align:center;
+    }
+
+    .Redes2{
+        width:100%;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+
+    .Redes2 img{
+        padding:40px;
+        width:100px;
+    }
+
+    .body{
         width:900px;
     }
 
@@ -616,6 +670,7 @@ footer{
         zoom:300%;
         min-width:900px;
         background-size:900px;
+        background-color:#000E15;
     }
 
     .Space2{
