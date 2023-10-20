@@ -309,7 +309,6 @@ h2{
 }
 
 header a{
-    width:35px;
     height:35px;
     text-decoration:none;
     color:white;
@@ -344,9 +343,11 @@ header img{
 }
 
 .Redes{
+    width:205px;
     height:35px;
     margin-right:25px;
     display:flex;
+    justify-content: space-between;
 }
 
 .Redes2{
